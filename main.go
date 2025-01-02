@@ -1,16 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	var i interface{} = "Hello"
 
-	switch v := i.(type) {
-	case int:
-		fmt.Println("Intefer", v)
-	case string:
-		fmt.Println("STring", v)
-	default:
-		fmt.Println("NO DATA TYPE")
-	}
+	var ch1 chan int
+	ch2 := make(chan int)
+	fmt.Println(ch1, ch2)
 }
